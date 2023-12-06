@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Songsterr Search</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="your_logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Инструкция</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+  <div class="mb-3">
+    <label for="urlInput" class="form-label">Введите URL ссылки</label>
+    <input type="text" class="form-control" id="urlInput" placeholder="https://www.songsterr.com/a/wsa/nirvana-heart-shaped-box-tab-s31">
+  </div>
+  <button type="button" class="btn btn-primary" onclick="searchSong()">Найти</button>
+
+  <ul class="list-group mt-3" id="searchResults">
+    <!-- Results will be displayed here -->
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  function searchSong() {
+    // Clear previous search results
+    $('#searchResults').empty();
+
+    // Get the input URL
+    const url = $('#urlInput').val();
+
+    // Check if the domain is correct
+    if (!url.includes('songsterr.com')) {
+      $('#searchResults').append('<li class="list-group-item list-group-item-danger">Неверная ссылка</li>');
+      return;
+    }
+
+    // Extract song ID from the URL
+    const songId = url.split('-').pop();
+
+
+    // Make a GET request to Songsterr API
+    $.get(`https://www.songsterr.com/api/meta/31/revisions`, function (data) {
+      // Parse and display results
+      data.forEach(result => {
+        const listItem = `
+          <li class="list-group-item">
+            <strong>${result.title}</strong> - ${result.artist}<br>
+            ${result.description}<br>
+            <a href="${result.source}" class="btn btn-primary" target="_blank">Скачать</a>
+          </li>
+        `;
+        $('#searchResults').append(listItem);
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

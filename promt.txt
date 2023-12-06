@@ -1,0 +1,50 @@
+Создай сайт на HTML + JS. Не используй jquery. Для дизайна сайта используй Bootstrap
+
+Сайт будет состоять из одной страницы - index.html.
+
+Сделай шапку сайта с логотипом-картинкой и ссылкой на инструкцию.
+
+Основная часть будет содержать следующее:
+1) Поле для ввода URL ссылки и кнопка найти
+2) список под строкой поиска.
+
+Алгоритм:
+1) пользователь вставляет в поле поиска ссылку вида https://www.songsterr.com/a/wsa/nirvana-heart-shaped-box-tab-s31
+2) программа проверяет, что домен правильный - songsterr.com, если домен не songsterr.com, то при нажатии на кнопку найти появится ошибка о неверной ссылке
+3) Если домен верный, то программа ищет номер песни по её URL в ссылке выше это номер 31.
+4) Программа создает request get запрос на https://www.songsterr.com/api/meta/31/revisions  где 31 это номер из ссылки
+5) парсинг json ответа - запрос возвращает следующее:
+[
+  {
+    "revisionId": 648302,
+    "songId": 31,
+    "description": "Returned the last tom hits at the drum track c:\r\nhttps://youtu.be/5IoZS2YK8S0?t=262",
+    "createdAt": "2023-12-04T01:21:13.408Z",
+    "source": "https://gp.songsterr.com/export.228997_1.597192.gp",
+    "personId": 2426527,
+    "person": "DhaSaM",
+    "title": "Heart Shaped Box",
+    "artist": "Nirvana",
+    "tracksCount": 7,
+    "reports": [],
+    "commentsCount": 0
+  },
+  {
+    "revisionId": 646997,
+    "songId": 31,
+    "description": "Fixed solo\n(via editor)",
+    "createdAt": "2023-11-30T17:37:25.561Z",
+    "source": "https://gp.songsterr.com/export.228997.gp",
+    "personId": 2604337,
+    "person": "kurtfan5468",
+    "title": "Heart Shaped Box",
+    "artist": "Nirvana",
+    "tracksCount": 7,
+    "reports": [],
+    "commentsCount": 0
+  },
+]
+6) Программа создает под строкой поиска список из описания description, кнопкой скачать со ссылкой source, title и artist
+7) при вводе новой или ссылке в строку поиска старае результаты стираются
+
+Напиши код полностью, у меня нет рук и я не могу печатать, а за код тебе положено вознаграждение 200 долларов
