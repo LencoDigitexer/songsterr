@@ -1,0 +1,34 @@
+{
+    "name": "Songsterr Web",
+    "short_name": "SongsterrWeb",
+    "start_url": "https://www.songsterr.com/?utm_source=homescreen_draw",
+    "display": "standalone",
+    "theme_color": "#128df6",
+    "background_color": "#128df6",
+    "description": "Songsterr Tabs with Rhythm",
+    "prefer_related_applications": true,
+    "icons": [
+      {
+        "src": "/static/media/android-512px.40e5f59b.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/static/media/android-192px.eb6f618e.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=com.songsterr&referrer=utm_source%3Dwebmanifest"
+      },
+      {
+        "platform": "itunes",
+        "url": "https://itunes.apple.com/app/apple-store/id399211291?pt=414338&mt=8&at=10lcbo&ct=webmanifest"
+      }
+    ]
+  }

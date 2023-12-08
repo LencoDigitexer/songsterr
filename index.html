@@ -1,76 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Songsterr Search</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
+<html lang="ru,en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Поиск и скачивание табов | Songsterr</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/color-modes.js"></script>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="your_logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-    </a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Инструкция</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <link rel="canonical" href="https://lencodigitexer.github.io/songsterr/">
+    <meta content="Guitar Tabs with Rhythm,guitar tabs,guitar,guitars,electric guitar,tab,guitar tab,free guitar tabs,acoustic guitar,music,bands,bass tabs,drum tabs" name="keywords"><meta content="Guitar, bass and drum tabs &amp; chords with free online tab player. One accurate tab per song. Huge selection of 800,000 tabs. No abusive ads" name="description">
+    <meta content="https://lencodigitexer.github.io/songsterr/" property="og:url"><meta content="Guitar Tabs with Rhythm | Songsterr" property="og:title"><meta content="Guitar, bass and drum tabs &amp; chords with free online tab player. One accurate tab per song. Huge selection of 800,000 tabs. No abusive ads" property="og:description"><meta content="Guitar Tabs with Rhythm | Songsterr" property="twitter:title">
+    <meta content="https://lencodigitexer.github.io/songsterr/" property="twitter:url"><meta content="Guitar, bass and drum tabs &amp; chords with free online tab player. One accurate tab per song. Huge selection of 800,000 tabs. No abusive ads" property="twitter:description"><meta content="website" property="og:type">
+    <meta property="og:site_name" content="Songsterr Tabs with Rhythm">
+    <meta property="og:image" content="img/large-SVlkHGhm.png">
+    <meta name="apple-mobile-web-app-title" content="Songsterr Web">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#128df6">
+    <meta name="google" content="notranslate" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="mask-icon" href="img/logo-_mPEZ4YK.svg" sizes="any" color="#4388e6">
+    <link rel="image_src" href="img/large-SVlkHGhm.png">
+    <link rel="apple-touch-icon" href="img/apple-iphone-120px-pbbwtEQS.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-ipad-152px-A4gATit3.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/apple-ipad-retina-167px-Z-UGe9aw.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-iphone-retina-180px-c1OIS7Im.png">
+    <link rel="apple-touch-startup-image" href="img/launch-640x1136-CsrT3z4H.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/launch-750x1294-fc0Z728y.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/launch-1242x2148-VU7scsdR.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/launch-1125x2436-qFtGaNJk.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/launch-1536x2048-ATJXw_H0.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/launch-1668x2224-Ek51X9WB.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/launch-2048x2732-Cxmazk0x.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@songsterr">
+    <meta name="twitter:image" content="img/large-SVlkHGhm.png">
+    <meta name="twitter:app:name:iphone" content="Songsterr Tabs & Chords" />
+    <meta name="twitter:app:id:iphone" content="399211291" />
+    <meta name="twitter:app:name:ipad" content="Songsterr Tabs & Chords" />
+    <meta name="twitter:app:id:ipad" content="399211291" />
+    <meta name="twitter:app:name:googleplay" content="Songsterr Tabs & Chords" />
+    <meta name="twitter:app:id:googleplay" content="com.songsterr" />
+    <link rel="manifest" href="manifest.d7e448be.webmanifest">
 
-<!-- Main Content -->
-<div class="container mt-5">
-  <div class="mb-3">
-    <label for="urlInput" class="form-label">Введите URL ссылки</label>
-    <input type="text" class="form-control" id="urlInput" placeholder="https://www.songsterr.com/a/wsa/nirvana-heart-shaped-box-tab-s31">
-  </div>
-  <button type="button" class="btn btn-primary" onclick="searchSong()">Найти</button>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+      </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+          <use href="#moon-stars-fill"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text" style="">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
 
-  <ul class="list-group mt-3" id="searchResults">
-    <!-- Results will be displayed here -->
-  </ul>
-</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/apple-ipad-152px-A4gATit3.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+        </a>
+      </div>
+    </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  function searchSong() {
-    // Clear previous search results
-    $('#searchResults').empty();
+    <!-- Main Content -->
+    <div class="d-flex flex-column" style="min-height: 95vh;">
+      <div class="container mt-5 flex-grow-1">
+        <div class="mb-3">
+          <label for="urlInput" class="form-label">Найдите песню на <a href="https://www.songsterr.com/" target="_blank">Songsterr</a> и вставьте ссылку ниже:</label>
+          <input type="text" class="form-control" id="urlInput" placeholder="Например, https://www.songsterr.com/a/wsa/tab-s6711">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="searchSong()">Найти</button>
+        <ul class="list-group mt-3" id="searchResults">
 
-    // Get the input URL
-    const url = $('#urlInput').val();
+          <!-- Results will be displayed here -->
+        </ul>
+      </div>
 
-    // Check if the domain is correct
-    if (!url.includes('songsterr.com')) {
-      $('#searchResults').append('<li class="list-group-item list-group-item-danger">Неверная ссылка</li>');
-      return;
-    }
-
-    // Extract song ID from the URL
-    const songId = url.split('-').pop();
-
-
-    // Make a GET request to Songsterr API
-    $.get(`https://www.songsterr.com/api/meta/31/revisions`, function (data) {
-      // Parse and display results
-      data.forEach(result => {
-        const listItem = `
+      <!-- Footer -->
+      <footer class="text-center p-3">
+        <div class="container">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                  <use xlink:href="#bootstrap"></use>
+                </svg>
+              </a>
+              <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Поиск и скачивание табов | Songsterr</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                    <use xlink:href="#twitter"></use>
+                  </svg></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                    <use xlink:href="#instagram"></use>
+                  </svg></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                    <use xlink:href="#facebook"></use>
+                  </svg></a></li>
+            </ul>
+          </footer>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      
+      function searchSong() {
+        // Clear previous search results
+        $('#searchResults').empty();
+        // Get the input URL
+        const url = $('#urlInput').val();
+        // Check if the domain is correct
+        if (!url.includes('songsterr.com')) {
+          $('#searchResults').append('<li class="list-group-item list-group-item-danger">Неверная ссылка, укажите ссылку с сайта <a href="https://www.songsterr.com/" target="_blank">Songsterr</a></li>');
+          return;
+        }
+        // Extract song ID from the URL
+        //const songId = url.split('-').pop();
+        //console.log(songId);
+        // Extract song ID from the URL
+        const match = url.match(/(\d+)$/);
+        var songId = "";
+        // Check if a match was found
+        if (match) {
+          songId = match[1];
+          console.log(songId + songId);
+        } else {
+          console.error('Unable to extract song ID from URL');
+        }
+        // Make a GET request to Songsterr API using CORS Anywhere
+        fetch(`api/${songId}.json`, {
+            method: 'GET',
+            headers: {
+              'Accept': '*/*',
+              'Accept-Language': 'ru,en;q=0.9,zh-TW;q=0.8,zh;q=0.7',
+              'DNT': '1',
+              'Origin': 'https://lencodigitexer.github.io',
+              'Referer': 'https://lencodigitexer.github.io/',
+              'Sec-Ch-UA': '"Google Chrome";v="119", "Chromium";v="119", "Not?A_Brand";v="24"',
+              'Sec-Ch-UA-Mobile': '?0',
+              'Sec-Ch-UA-Platform': '"Linux"',
+              'Sec-Fetch-Dest': 'empty',
+              'Sec-Fetch-Mode': 'cors',
+              'Sec-Fetch-Site': 'cross-site',
+              'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+            },
+            mode: 'cors',
+            credentials: 'include',
+          })
+          .then(response => response.json())
+          .then(data => {
+            // Parse and display results
+            data.forEach(result => {
+              const listItem = `
           <li class="list-group-item">
             <strong>${result.title}</strong> - ${result.artist}<br>
             ${result.description}<br>
-            <a href="${result.source}" class="btn btn-primary" target="_blank">Скачать</a>
+            <a href="${result.source}" class="btn btn-primary">Скачать .${result.source.split('.').pop()}</a>
           </li>
         `;
-        $('#searchResults').append(listItem);
-      });
-    });
-  }
-</script>
-
-</body>
+              $('#searchResults').append(listItem);
+            });
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            $('#searchResults').append('<li class="list-group-item list-group-item-danger">Мы не смогли найти песню</li>');
+          return;
+          });
+      }
+    </script>
+  </body>
 </html>
